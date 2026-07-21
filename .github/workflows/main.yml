@@ -24,7 +24,7 @@ jobs:
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.EC2_IP }}
-          user: ${{ secrets.AWS_USER }}
+          username: ${{ secrets.AWS_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
             sudo cp -r /tmp/website/* /var/www/html
