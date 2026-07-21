@@ -18,7 +18,7 @@ jobs:
           user: ${{ secrets.AWS_USER }}
           key: ${{ secrets.SSH_KEY }}
           source: "./*"
-          target: /tmp/website
+          target: "/tmp/website"
 
       - name: copying the files from working-directory to nginx
         uses: appleboy/ssh-action@v1
