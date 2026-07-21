@@ -15,7 +15,7 @@ jobs:
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.EC2_IP }}
-          user: ${{ secrets.AWS_USER }}
+          username: ${{ secrets.AWS_USER }}
           key: ${{ secrets.SSH_KEY }}
           source: "./*"
           target: "/tmp/website"
